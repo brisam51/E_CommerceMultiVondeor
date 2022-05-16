@@ -1,0 +1,11 @@
+
+1-ctrl+p=>display search bar
+2-ctrl+shift+p=>display the command pallete
+3-ctrl+B=>toggle the sidebat
+4-ctrl+shift+E=>move to Explorer window
+5-ctrl+shift+M=>Quickly show errors and warning
+6-ctrl+shift+L=>multi curosor selection
+7-ctrl+D=>one by one selection
+8-ctrl+ / =>toggle line comment
+9-ctrl+shift+i=>format the entire file
+10-Alt+Up  or Alt+ down =>Move line
