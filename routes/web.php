@@ -26,4 +26,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+
 Route::get('admin/dashboard',[AdminController::class,'dashboard']);
+Route::get('admin/dashboard',[AdminController::class,'login']);
