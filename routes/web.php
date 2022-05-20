@@ -27,5 +27,10 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 
-Route::get('admin/dashboard',[AdminController::class,'dashboard']);
-Route::get('admin/dashboard',[AdminController::class,'login']);
+
+
+Route::prefix('admin')->group(function () {
+    Route::get('dashboard',[AdminController::class,'dashboard']);
+Route::match(['get','post'],'login',[AdminController::class,'login']);
+    
+});
