@@ -24,14 +24,25 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 
 
 
 Route::prefix('/admin')->group(function () {
-    Route::match(['get','post'],'login',[AdminController::class,'login']);
-    
-    Route::get('dashboard',[AdminController::class,'dashboard']);
+    Route::match(['get', 'post'], 'login', [AdminController::class, 'login']);
+    Route::group(['middleware' => ['admin']], function () {
+        //Admin dashboard
+        Route::get('dashboard', [AdminController::class, 'dashboard']);
+        //admin log out
+        Route::get('logout', [AdminController::class, 'logout']);
 
+        //admin update  password
+        Route::match(['get', 'post'], 'update-admin-password', [AdminController::class, 'updateAdminPassword']);
+        //check  admin current password
+        Route::post('check-admin-password', [AdminController::class, 'checkAdminPassword']);
+
+        //admin update details
+        Route::match(['get', 'post'],'update-admin-detials', [AdminController::class, 'updateAdminDetails']);
+    });
 });
