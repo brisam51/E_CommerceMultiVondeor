@@ -1,11 +1,12 @@
 @extends('admin.layout.layout')
 @section('content')
     <div class="container">
+        
         <div class="col-lg-6 col-offset-6 centered">
 
 
             <div class="card-body ">
-                <h4 class="card-title">Update Admin Details</h4>
+                <h4 class="card-title">Update personal Informatiom</h4>
 
                 @if (Session::has('error_message'))
                     <div class="alert alert-primary d-flex align-items-center" role="alert">
@@ -78,5 +79,6 @@
                 </form>
             </div>
         </div>
+
     </div>
 @endsection

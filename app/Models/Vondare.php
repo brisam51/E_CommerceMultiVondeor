@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Vondare extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'name',
+        'mobile',
+        'country',
+        'pincode',
+        'city',
+        'address',
+        'state',
+
+    ];
 }

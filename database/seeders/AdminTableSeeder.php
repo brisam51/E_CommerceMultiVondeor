@@ -17,16 +17,17 @@ class AdminTableSeeder extends Seeder
     {
         //create new admin seeder..
         $recordAdmin=[
+            
             [
                 'id'=>1,
-                'name'=>'super Admin',
-                'type'=>'superAdmin',
+                'name'=>'superadmin',
+                'type'=>'superadmin',
                 'vondar_id'=>0,
-                'mobile'=>'0994444444',
+                'mobile'=>'0970000',
                 'email'=>'admin@email.com',
                 'password'=>'$2y$10$zqRrO4rkgg72AMNs7m/a3e9Kio8VQKm.Us6E.82L.OiATFq5yxvAu',
                 'image'=>'',
-                'status'=>1
+                'status'=>0
             ],
             
             ];//end variable..

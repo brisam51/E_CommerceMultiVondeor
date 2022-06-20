@@ -15,12 +15,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        $this->call(AdminTableSeeder::class);
-        // \App\Models\User::factory(10)->create();
-
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+      //  $this->call(AdminTableSeeder::class);
+      //  $this->call(VendorTableSeeder::class);
+         //$this->call(vendorBusinessDetailsSeeder::class);
+         $this->call(vendorBankDetailsSeeder::class);
     }
 }
